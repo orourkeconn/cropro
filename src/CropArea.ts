@@ -742,7 +742,7 @@ export class CropArea {
 
     this.coverDiv.className = `${this.styles.classNamePrefixBase} ${this.styles.classNamePrefix}`;
 
-    this.coverDiv.id = "crop-area-cover-div" //my changes
+    this.coverDiv.id = "crop-area-cover-div"; //my changes
 
     // hardcode font size so nothing inside is affected by higher up settings
     this.coverDiv.style.fontSize = '16px';
