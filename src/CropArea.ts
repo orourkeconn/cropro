@@ -1069,8 +1069,10 @@ export class CropArea {
     // @todo better cleanup
     // my changes
     // this.targetRoot.removeChild(this.coverDiv); // --
-    coverDiv = document.getElementById("crop-area-cover-div"); // ++
-    coverDiv.remove(); // ++
+    var parentOfCoverDiv = this.coverDiv.parentElement; // ++
+    parentOfCoverDive.removeChild(this.coverDiv);
+    //coverDiv = document.getElementById("crop-area-cover-div"); // ++
+    //coverDiv.remove(); // ++
   }
 
   /**
