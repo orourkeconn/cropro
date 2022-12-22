@@ -742,7 +742,7 @@ export class CropArea {
 
     this.coverDiv.className = `${this.styles.classNamePrefixBase} ${this.styles.classNamePrefix}`;
 
-    this.coverDiv.id = "crop-area-cover-div"; //my changes
+    //this.coverDiv.id = "crop-area-cover-div"; //my changes
 
     // hardcode font size so nothing inside is affected by higher up settings
     this.coverDiv.style.fontSize = '16px';
@@ -788,9 +788,9 @@ export class CropArea {
       }
     }
     //my changes
-    //this.targetRoot.appendChild(this.coverDiv); // --
-    var imgElement = document.getElementById("visual-img-to-crop"); // ++
-    imgElement.parentElement.appendChild(this.coverDiv); // ++
+    this.targetRoot.appendChild(this.coverDiv); // --
+    //var imgElement = document.getElementById("visual-img-to-crop"); // ++
+    //imgElement.parentElement.appendChild(this.coverDiv); // ++
 
     this.uiDiv = document.createElement('div');
     this.uiDiv.style.display = 'flex';
@@ -1068,9 +1068,9 @@ export class CropArea {
     }
     // @todo better cleanup
     // my changes
-    // this.targetRoot.removeChild(this.coverDiv); // --
-    var parentOfCoverDiv = this.coverDiv.parentElement; // ++
-    parentOfCoverDive.removeChild(this.coverDiv);
+    this.targetRoot.removeChild(this.coverDiv); // --
+    //var parentOfCoverDiv = this.coverDiv.parentElement; // ++
+    //parentOfCoverDive.removeChild(this.coverDiv);
     //coverDiv = document.getElementById("crop-area-cover-div"); // ++
     //coverDiv.remove(); // ++
   }
